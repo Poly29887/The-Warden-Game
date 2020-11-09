@@ -18,11 +18,11 @@ int main()
     sf::View view(sf::Vector2f(0.0f, 0.0f), sf::Vector2f(VIEW_HEIGHT, VIEW_HEIGHT));
     sf::Sprite background;
 
-    /*sf::Music music;
-        if (!music.openFromFile("D:\Programming Project\The Warden Game\The Warden Game\sound"))
+    sf::Music music;
+        if (!music.openFromFile("D:\Programming Project\The Warden Game\The Warden Game\sound\Epic_Adventure_Music.ogg"))
         {
             std::cout << "Load music failed" << std::endl;
-    }*/
+    }
     
     //sf::RectangleShape block(sf::Vector2f(100.0f, 200.0f));
     //block.setFillColor(sf::Color::Blue);
@@ -84,7 +84,7 @@ int main()
        view.setCenter(player.GetPosition());
 
         window.clear();
-        //music.play();
+        music.play();
         window.draw(background);
         window.setView(view);
         player.draw(window);
